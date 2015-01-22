@@ -38,5 +38,10 @@ public class SomeTest {
         Assert.assertEquals(loginInfo.getText(), "Vitalii Ivanov");
     }
 
+    @Test
+    public void log_out_of_facebook() {
+        // todo: finish the test
+    }
+
 
 }
