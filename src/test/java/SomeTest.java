@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,7 +22,7 @@ public class SomeTest {
 
     @After
     public void clean() {
-        //driver.quit();
+        driver.quit();
     }
 
     @Test
@@ -36,7 +35,7 @@ public class SomeTest {
         Assert.assertEquals(loginInfo.getText(), "Vitalii Ivanov");
     }
 
-    @Test     // todo: finish the test
+    @Test
     public void log_out_of_facebook () {
         LoginToFacebook();
 
@@ -52,9 +51,9 @@ public class SomeTest {
         List<WebElement> menuItems = driver.findElements(By.className("_54nc"));
         menuItems.get(6).click();
 
-        //TODO: Assert that we logged out successfully
-        //Assert
+
     }
+
 
     private void LoginToFacebook(){
         driver.get("http://www.facebook.com");
